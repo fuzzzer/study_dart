@@ -19,3 +19,11 @@ void main() {
 // The function returns 5, which is then printed to the console. Functions in Dart can also have optional parameters,
 // named parameters, and default values. You can also define functions that don't return a value by using the void return type.
 // By using functions, you can write more modular and organized code that is easy to maintain and understand.
+
+// Some good coding principles when using functions and parameters include:
+// 1. Giving functions descriptive names that reflect what they do
+// 2. Specifying the types of parameters in the function signature
+// 3. Keeping functions small and focused, performing only one task
+// 4. Avoiding side effects, where a function changes state outside of its own scope
+// 5. Documenting the function's purpose, inputs, outputs, and any assumptions made
+// By following these principles, functions and parameters can help you write clean, reusable, and easily maintainable code.

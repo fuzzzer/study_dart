@@ -15,6 +15,6 @@ void main() {
 }
 
 int? product(x, y) {
-  var product = x * y;
-  return product;
+  int? result = x * y;
+  return result;
 }

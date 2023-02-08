@@ -1,6 +1,7 @@
 // 5. Write a program that takes a number as input and prints all its divisors.
 
 import 'dart:io';
+import 'dart:math';
 
 void main() {
   print("Enter your number here: ");
@@ -11,9 +12,10 @@ void main() {
 
 void allDivisors(int x) {
   print('Divisors of $x are:');
-  for (var i = 1; i <= x; i++) {
+  for (int i = 1; i <= x / 2; i++) {
     if (x % i == 0) {
       print(i);
     }
   }
+  print(x);
 }

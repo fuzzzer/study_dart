@@ -8,8 +8,9 @@ void main() {
 
   Set<String?> uniqueChars = {};
 
-  for (var char in userInput!.split(' ')) {
+  for (var char in userInput!.split('')) {
     uniqueChars.add(char);
+    print(char);
   }
 
   print(uniqueChars);

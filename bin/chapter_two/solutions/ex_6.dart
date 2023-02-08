@@ -3,33 +3,17 @@ import 'dart:io';
 import 'dart:core';
 
 void main() {
-  print('Enter your number');
-  final String? userInput1 = stdin.readLineSync();
-  int? num1 = int.tryParse(userInput1 ?? "");
+  int numItems = getInteger(userInstructions: "Enter number of items: ");
 
-  print('Enter your number');
-  final String? userInput2 = stdin.readLineSync();
-  int? num2 = int.tryParse(userInput2 ?? "");
+  List<int?> numbers = [];
+  for (int i = 0; i < numItems!; i++) {
+    numbers.add(getInteger());
+  }
 
-  print('Enter your number');
-  final String? userInput3 = stdin.readLineSync();
-  int? num3 = int.tryParse(userInput3 ?? "");
-
-  print('Enter your number');
-  final String? userInput4 = stdin.readLineSync();
-  int? num4 = int.tryParse(userInput4 ?? "");
-
-  print('Enter your number');
-  final String? userInput5 = stdin.readLineSync();
-  int? num5 = int.tryParse(userInput5 ?? "");
-
-  List<int?> numbers = [num1, num2, num3, num4, num5];
   findMinMax(numbers);
 }
 
-void findMinMax(
-  List<int?> name,
-) {
+void findMinMax(List<int?> name) {
   int? min = name[0];
   int? max = name[0];
 
@@ -43,4 +27,11 @@ void findMinMax(
   }
   print('Minimum: $min');
   print('Maximum: $max');
+}
+
+int getInteger({String userInstructions = "Enter your number: "}) {
+  print(userInstructions);
+  final String? userInput1 = stdin.readLineSync();
+  int? num = int.tryParse(userInput1 ?? "");
+  return num!;
 }

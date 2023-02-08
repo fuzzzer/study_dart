@@ -1,8 +1,6 @@
 // 10. Write a program that takes a string as input and calculates the frequency of each character in the string.
 import 'dart:io';
 
-import 'package:dart_study/dart_study.dart';
-
 void main() {
   print('Please enter a word here:');
   final String? userInput = stdin.readLineSync();

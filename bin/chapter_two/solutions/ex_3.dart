@@ -13,7 +13,7 @@ void main() {
   final String? endingPoint = stdin.readLineSync();
   int? num2 = int.tryParse(endingPoint ?? "");
 
-  for (int i = num1!; i < num2!; i++) {
+  for (int i = num1!; i <= num2!; i++) {
     print(i);
   }
 }

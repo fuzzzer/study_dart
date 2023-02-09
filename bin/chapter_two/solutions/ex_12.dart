@@ -4,14 +4,14 @@ import "dart:io";
 
 void main() {
   print("Enter any number of numbers seperated by ' ': ");
-  final String? userInput1 = stdin.readLineSync();
-  print(sumOfAll(userInput1!));
+  final String userInput1 = stdin.readLineSync()!;
+  print(sumOfAll(userInput1));
 }
 
 int? sumOfAll(String input) {
   List<String?> splitted = [];
 
-  for (var char in input!.split(' ')) {
+  for (var char in input.split(' ')) {
     splitted.add(char);
   }
   splitted.sort();

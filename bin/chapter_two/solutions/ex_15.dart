@@ -4,8 +4,9 @@ import "dart:io";
 void main() {
   print("Enter a statement : ");
 
-  final String? userInput1 = stdin.readLineSync();
-  print(wordList(userInput1));
+  final String userInput1 = stdin.readLineSync()!;
+  //print(wordList(userInput1));
+  print(userInput1.split(' '));
 }
 
 List<String?> wordList(x) {

@@ -1,10 +1,7 @@
-// 14. Write a function that takes two strings as arguments and returns the concatenation of the two strings.
+// this file has functions that can be performed on strings
 
+//this function asks user for the number of strings and concatenates them;
 import 'dart:io';
-
-void main() {
-  print(stringConcatenate());
-}
 
 String? stringConcatenate() {
   print("How many strings do you want to concatenate? :");

@@ -4,10 +4,10 @@ import "dart:io";
 
 void main() {
   print('Please enter a word here:');
-  final String? userInput = stdin.readLineSync();
-  List<String?> userWord = userInput!.split('');
+  final String userInput = stdin.readLineSync()!;
+  List<String?> userWord = userInput.split('');
   print('Please enter a character here:');
-  final String? userInput2 = stdin.readLineSync();
+  final String userInput2 = stdin.readLineSync()!;
   print(countACharacter(userWord, userInput2));
 }
 

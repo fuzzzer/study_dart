@@ -6,7 +6,7 @@ void main() {
   int numItems = getInteger(userInstructions: "Enter number of items: ");
 
   List<int?> numbers = [];
-  for (int i = 0; i < numItems!; i++) {
+  for (int i = 0; i < numItems; i++) {
     numbers.add(getInteger());
   }
 

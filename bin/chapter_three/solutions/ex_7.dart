@@ -1,18 +1,9 @@
 // 7. Create a list of strings and find the longest string in the list.
 
-import 'package:test/expect.dart';
+import '../../methods/lists.dart';
 
 void main() {
-  List<String> myList = [
-    "Home",
-    "Work",
-    "School",
-    "University",
-    "Club",
-    "Church",
-    "Airpot",
-    "Steet"
-  ];
+  List<String> myList = createList();
   myList.sort(
     (a, b) => a.length.compareTo(b.length),
   );

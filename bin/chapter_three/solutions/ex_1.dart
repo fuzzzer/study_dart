@@ -1,6 +1,8 @@
 // 1. Create a list of 5 strings and print the third element.
 
+import '../../methods/lists.dart';
+
 void main() {
-  List<String?> myList = ["Home", "Work", "School", "University", "Club"];
-  print(myList[2]);
+  List<String?> myList = createList();
+  print('Third element in the list is: ${myList[2]}');
 }

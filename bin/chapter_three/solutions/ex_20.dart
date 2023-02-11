@@ -11,7 +11,7 @@ void main() {
   List<MapEntry<String, double>> list =
       ratings.entries.toList(); //map entry რომ არ დდაიპრიინტოს როგორ ვქნა?
   list.sort((a, b) => a.value.compareTo(b.value));
-  print('Shortest route is: ${list[0]}');
-  list = list.reversed.toList();
-  print('Longest route is: ${list[0]}');
+  print('Shortest route is: ${list[0].key} : ${list[0].value}');
+  int last = list.length - 1;
+  print('Longest route is: ${list[last].key} : ${list[last].value}');
 }

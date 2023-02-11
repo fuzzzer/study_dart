@@ -10,6 +10,6 @@ void main() {
 
   scores.remove("Isaiah");
 
-  bool Isaiah = scores.containsKey("Isaiah");
-  print(Isaiah);
+  bool isaiah = scores.containsKey("Isaiah");
+  print(isaiah);
 }

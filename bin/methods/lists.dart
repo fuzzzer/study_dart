@@ -47,11 +47,10 @@ Map<String, int> simpleSheet() {
   for (int i = 0; i < numOfEntries; i++) {
     print("Please specify key of a reciever: ");
     String keyInput = stdin.readLineSync()!;
-    String key = "$keyInput";
     print("Please specify value of a reciever: ");
     String valueInput = stdin.readLineSync()!;
     int value = int.parse(valueInput);
-    sheet.addAll({key: value});
+    sheet.addAll({keyInput: value});
   }
   return sheet;
 }

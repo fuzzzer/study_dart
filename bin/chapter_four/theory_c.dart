@@ -38,6 +38,7 @@ Object richGela = Employee(
 
 void main() {
   if (richGela is Employee) {
+    // ignore: unused_local_variable
     Employee knownForSureEmployy = richGela as Employee;
     // do something with the Employee object
   }

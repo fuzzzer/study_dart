@@ -1,7 +1,6 @@
 // 5. Write a program that takes a number as input and prints all its divisors.
 
 import 'dart:io';
-import 'dart:math';
 
 void main() {
   print("Enter your number here: ");

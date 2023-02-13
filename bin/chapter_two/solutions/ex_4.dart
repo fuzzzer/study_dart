@@ -1,6 +1,5 @@
 // 4. Write a program that takes a number as input and calculates its factorial.
 
-import 'dart:io';
 import 'ex_6.dart';
 
 void main() {

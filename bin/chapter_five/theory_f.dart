@@ -1,5 +1,7 @@
-//I believe at this point if you understood everything we covered this should be
-
+//I believe at this point if you understood everything we covered this should be understandable except:
+// implements: https://www.educative.io/answers/how-to-use-the-implements-keyword-in-dart
+// and
+// typedefs: https://www.tutorialspoint.com/dart_programming/dart_programming_typedef.htm
 // ignore_for_file: unnecessary_final
 
 typedef Json = Map<String, dynamic>;

@@ -38,21 +38,21 @@ class Book {
 }
 
 // Create a Customer class that has a name, age, and a list of books they have checked out.
-class Customer {
+class Person {
   String name;
   int age;
   List<Book> booksCheckedOut;
 
-  Customer(this.name, this.age, this.booksCheckedOut);
+  Person(this.name, this.age, this.booksCheckedOut);
+}
+
+class Customer extends Person {
+  Customer(super.name, super.age, super.booksCheckedOut);
 }
 
 // Create an Employee class that has a name, age, and a list of books they have checked out.
-class Employee {
-  String name;
-  int age;
-  List<Book> booksCheckedOut;
-
-  Employee(this.name, this.age, this.booksCheckedOut);
+class Employee extends Person {
+  Employee(super.name, super.age, super.booksCheckedOut);
 }
 
 // Create a Library class that has a list of books, a list of customers, and a list of employees.
@@ -73,7 +73,7 @@ class Library {
     int code = userInputintoIsbn();
 
     bool hasBook = books.any((book) => book.isbnNumber == code);
-    if (hasBook = true) {
+    if (hasBook) {
       Book targetBook = books.firstWhere((book) => book.isbnNumber == code);
       books.remove(targetBook);
       if (employeeName == null) {
@@ -88,13 +88,13 @@ class Library {
     int code = userInputintoIsbn();
 
     if (employeeName == null) {
-      takeOutofUsersListandPutInLibrary(customerName, code);
+      takeOutofUsersListandPutInLibrary(customerName!, code);
     } else if (customerName == null) {
       takeOutofUsersListandPutInLibrary(employeeName, code);
     }
   }
 
-  void takeOutofUsersListandPutInLibrary(dynamic name, int isbn) {
+  void takeOutofUsersListandPutInLibrary(Person name, int isbn) {
     bool hasBook = name.booksCheckedOut.any((book) => book.isbnNumber == isbn);
     if (hasBook == true) {
       Book targetBook =

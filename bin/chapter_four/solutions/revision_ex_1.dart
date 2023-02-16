@@ -33,7 +33,7 @@ class Book {
   );
   @override
   String toString() {
-    return '$name';
+    return name;
   }
 }
 

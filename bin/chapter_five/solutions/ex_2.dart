@@ -31,17 +31,17 @@
 
 void main() {
   Customer gocha = Customer(name: "Gocha", age: 20, adress: "Plexanovi");
-  gocha.addAcount(savingsAccount(133340, 13200, 8));
-  savingsAccount savings2 = savingsAccount(444000, 20000, 8);
+  gocha.addAcount(SavingsAccount(133340, 13200, 8));
+  SavingsAccount savings2 = SavingsAccount(444000, 20000, 8);
   gocha.addAcount(savings2);
   print(gocha.accountList);
 }
 
-class bankAccounts {
+class BankAccounts {
   double balance;
   int accountNumber;
   double interestRate;
-  bankAccounts(this.accountNumber, this.balance, this.interestRate);
+  BankAccounts(this.accountNumber, this.balance, this.interestRate);
 
   void deposit(int x) {
     balance += x;
@@ -52,8 +52,8 @@ class bankAccounts {
   }
 }
 
-class savingsAccount extends bankAccounts {
-  savingsAccount(
+class SavingsAccount extends BankAccounts {
+  SavingsAccount(
     super.accountNumber,
     super.balance,
     super.interestRate,
@@ -78,10 +78,10 @@ class savingsAccount extends bankAccounts {
   }
 }
 
-class checkAccount extends bankAccounts {
+class CheckAccount extends BankAccounts {
   double afterInterest;
 
-  checkAccount(super.accountNumber, super.balance, super.interestRate,
+  CheckAccount(super.accountNumber, super.balance, super.interestRate,
       this.afterInterest);
   double interestCount() {
     afterInterest = balance;
@@ -101,21 +101,19 @@ class Customer {
   String name;
   int age;
   String adress;
-  List<bankAccounts> accountList = [];
+  List<BankAccounts> accountList = [];
   Customer({
     required this.name,
     required this.age,
     required this.adress,
   });
 
-  void addAcount(bankAccounts name) {
+  void addAcount(BankAccounts name) {
     accountList.add(name);
   }
 
-  void removeAccount(bankAccounts name) {
-    if (accountList != null) {
-      accountList.remove(name);
-    }
+  void removeAccount(BankAccounts name) {
+    accountList.remove(name);
   }
 
   @override

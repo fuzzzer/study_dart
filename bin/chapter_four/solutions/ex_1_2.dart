@@ -40,8 +40,8 @@ void main() {
 }
 
 void printIfPaid(Employee name) {
-  if (name is Employee && name.salary != null) {
-    Employee paidEmployee = name as Employee;
+  if (name.salary != null) {
+    Employee paidEmployee = name;
     print(paidEmployee);
   }
 }

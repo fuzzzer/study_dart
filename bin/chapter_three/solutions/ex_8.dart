@@ -1,22 +1,8 @@
+// 8. Create a list of words and count the number of occurrences of each word.
+
+import '../../methods/lists.dart';
+
 void main() {
-  int a = 5;
-  int b = a;
-
-  a = 10;
-
-  print(a);
-  print(b);
+  List<String> myList = createList();
+  print(wordOccurrences(myList));
 }
-
-
-
-
-
-
-
-
-// int add(int a, int b) {
-//   a = a + 10;
-//   b = b + 50;
-//   return a + b;
-// }

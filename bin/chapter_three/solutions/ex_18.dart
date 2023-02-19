@@ -1,22 +1,48 @@
+// 18. Create a map of employee names and their salaries. Find the average salary of all employees.
+
 void main() {
   Map<String, double> employees = {
     'John': 55000,
     'Jane': 65000,
     'Bob': 75000,
-    'Ann': 45000,
+    'Ann': 45,
   };
-
-  double totalSalary = 0;
-  int employeeCount = employees.length;
-
-  for (double salary in employees.values) {
-    totalSalary += salary;
-  }
-
-  double averageSalary = totalSalary / employeeCount;
-
-  print('The average salary of all employees is: $averageSalary');
+  print(avarage(employees));
 }
+
+double avarage(Map<String, double> name) {
+  double sum = 0;
+  for (double score in name.values) {
+    sum = sum + score;
+  }
+  double avarageOfAll = sum / name.length;
+
+  return avarageOfAll;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   double totalSalary = 0;
+//   int employeeCount = employees.length;
+
+//   for (double salary in employees.values) {
+//     totalSalary += salary;
+//   }
+
+//   double averageSalary = totalSalary / employeeCount;
+
+//   print('The average salary of all employees is: $averageSalary');
+// }
 
 // Explanation:
 

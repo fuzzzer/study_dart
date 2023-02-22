@@ -3,8 +3,10 @@ Function addNumbers(int x) {
 }
 
 void main() {
-  var addTen = addNumbers(10);
+  Function addTen = addNumbers(10);
+  Function addTwenty = addNumbers(20);
   print(addTen(5)); // output: 15
+  print(addTwenty(5));
 }
 
 // In this example, addNumbers is a function that returns another function that adds the 

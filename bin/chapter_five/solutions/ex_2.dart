@@ -31,16 +31,35 @@
 
 void main() {
   Customer gocha = Customer(name: "Gocha", age: 20, adress: "Plexanovi");
-  gocha.addAcount(SavingsAccount(133340, 13200, 8));
-  SavingsAccount savings2 = SavingsAccount(444000, 20000, 8);
+  gocha.addAcount(SavingsAccount(133340, 1000, 0.08));
+  SavingsAccount savings2 = SavingsAccount(444000, 1000, 0.08);
   gocha.addAcount(savings2);
-  print(gocha.accountList);
+  savings2.balanceCount();
+  print(savings2.balance);
+  print(savings2.interestCount);
+  CheckAccount check = CheckAccount(40000, 1000, 0.08);
+  check.balanceCount();
+  print(check.interestCount);
+  gocha.addAcount(check);
+  print(allInterest(gocha.accountList));
 }
+
+double allInterest(List<BankAccounts> name) {
+  double total = 0;
+  for (int i = 0; i < name.length; i++) {
+    total += name[i].interestCount;
+  }
+  return total;
+}
+
+//savings2.balanceCount();
+// print(savings2.balance);
 
 class BankAccounts {
   double balance;
   int accountNumber;
   double interestRate;
+  double interestCount = 0;
   BankAccounts(this.accountNumber, this.balance, this.interestRate);
 
   void deposit(int x) {
@@ -58,18 +77,13 @@ class SavingsAccount extends BankAccounts {
     super.balance,
     super.interestRate,
   );
-  set interest(double value) {
-    if (value > 0) {
-      interestRate = value;
-    }
-  }
 
-  double interestCount() {
+  void balanceCount() {
     for (int i = 0; i < 12; i++) {
-      double interest = balance *= interestRate;
+      double interest = balance * interestRate;
       balance += interest;
+      interestCount += interest;
     }
-    return balance;
   }
 
   @override
@@ -79,16 +93,18 @@ class SavingsAccount extends BankAccounts {
 }
 
 class CheckAccount extends BankAccounts {
-  double afterInterest;
+  CheckAccount(
+    super.accountNumber,
+    super.balance,
+    super.interestRate,
+  );
 
-  CheckAccount(super.accountNumber, super.balance, super.interestRate,
-      this.afterInterest);
-  double interestCount() {
-    afterInterest = balance;
+  void balanceCount() {
     for (int i = 0; i < 12; i++) {
-      afterInterest *= (interestRate * 0.7);
+      double interest = balance * 0.8 * interestRate;
+      balance += interest;
+      interestCount += interest;
     }
-    return afterInterest;
   }
 
   @override

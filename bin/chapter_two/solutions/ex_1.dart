@@ -1,19 +1,15 @@
+// 1. Write a program that takes a number as input and prints whether it is odd or even.
+
 import 'dart:io';
 
 void main() {
-  print("Enter a number: ");
-  final String? input = stdin.readLineSync();
-  int? num = int.tryParse(input ?? "");
+  print("Enter your number: ");
+  final String? userInput = stdin.readLineSync();
+  int? num = int.tryParse(userInput ?? "");
 
-  while (num == null) {
-    print("Enter a number, nothing else: ");
-    final String? input = stdin.readLineSync();
-    num = int.tryParse(input ?? "");
-  }
+  print('Even: ${isEven(num!)}');
+}
 
-  if (num % 2 == 0) {
-    print("The number is even.");
-  } else {
-    print("The number is odd.");
-  }
+bool isEven(int x) {
+  return x % 2 == 0;
 }

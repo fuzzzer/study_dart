@@ -38,5 +38,10 @@ void main() {
   Developer developer = Developer();
 
   manager.salary();
+
+  manager.salary();
+  manager.salary();
+
+  manager.salary();
   developer.salary();
 }

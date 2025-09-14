@@ -13,6 +13,14 @@
 // in Dart to allow for sharing and reuse of code, as well as modification
 // of behavior of parent class in child classes.
 
+void main() {
+  Honda honda = Honda();
+  Tesla tesla = Tesla();
+
+  honda.power();
+  tesla.power();
+}
+
 class Car {
   void power() {
     print("It runs on petrol.");
@@ -28,10 +36,10 @@ class Tesla extends Car {
   }
 }
 
-void main() {
-  Honda honda = Honda();
-  Tesla tesla = Tesla();
+// void main() {
+//   Honda honda = Honda();
+//   Tesla tesla = Tesla();
 
-  honda.power();
-  tesla.power();
-}
+//   honda.power();
+//   tesla.power();
+// }
